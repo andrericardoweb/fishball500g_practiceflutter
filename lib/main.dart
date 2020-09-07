@@ -141,17 +141,25 @@ class MyApp extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: Colors.red,
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: <Widget>[
-                      Text("Introdução",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
+                  child: Padding(
+                    padding: EdgeInsets.all(20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: <Widget>[
+                        Text("Introdução",
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 16, 21, 90),
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
-                      ),
+                        Text("Maragogi é uma cidade turística conhecida pelas suas longas praias como Burgalhau, perto do Rio dos Paus. Os recifes de coral ao largo da costa e os bancos de areia criaram uma lagoa pouco profunda, que serve de piscina natural. A sul de Maragogi encontra-se São Bento, uma aldeia piscatória com uma praia repleta de palmeiras. Aqui, a costa faz parte da área protegida da Costa dos Corais, que é rica em flora e fauna.",
+                          overflow: TextOverflow.ellipsis,
+                          softWrap: true,
+                          maxLines: 6,
+                        ),
                     ],
+                  ),
                   ),
                 ),
               ),
