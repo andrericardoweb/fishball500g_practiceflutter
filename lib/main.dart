@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Expanded(
-                  flex: 6,
+                  flex: 9,
                   child: Container(
                     margin: EdgeInsets.all(20),
                     decoration: BoxDecoration(
@@ -139,31 +139,93 @@ class MyApp extends StatelessWidget {
                 flex: 3,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.red,
+                    color: Colors.white,
                   ),
                   child: Padding(
-                    padding: EdgeInsets.all(20),
+                    padding: EdgeInsets.only(top: 10, left: 20, right: 20),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: <Widget>[
-                        Text("Introdução",
+                        Text(
+                          "Introdução",
                           style: TextStyle(
                             color: Color.fromARGB(255, 16, 21, 90),
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        Text("Maragogi é uma cidade turística conhecida pelas suas longas praias como Burgalhau, perto do Rio dos Paus. Os recifes de coral ao largo da costa e os bancos de areia criaram uma lagoa pouco profunda, que serve de piscina natural. A sul de Maragogi encontra-se São Bento, uma aldeia piscatória com uma praia repleta de palmeiras. Aqui, a costa faz parte da área protegida da Costa dos Corais, que é rica em flora e fauna.",
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "Maragogi é uma cidade turística conhecida pelas suas longas praias como Burgalhau, perto do Rio dos Paus. Os recifes de coral ao largo da costa e os bancos de areia criaram uma lagoa pouco profunda, que serve de piscina natural. A sul de Maragogi encontra-se São Bento, uma aldeia piscatória com uma praia repleta de palmeiras. Aqui, a costa faz parte da área protegida da Costa dos Corais, que é rica em flora e fauna.",
                           overflow: TextOverflow.ellipsis,
                           softWrap: true,
-                          maxLines: 6,
+                          maxLines: 5,
+                          style:
+                              TextStyle(
+                                color: Color.fromARGB(255, 16, 21, 90),
+                                fontSize: 14,                        
+                              ),
                         ),
-                    ],
-                  ),
+                      ],
+                    ),
                   ),
                 ),
               ),
-              Expanded(flex: 2, child: Placeholder()),
+              Expanded(
+                flex: 2,
+                child: Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Container(
+                        height: 60,
+                        width: 60,
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 254, 220, 220),
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Icon(
+                          Icons.favorite_border,
+                          color: Color.fromARGB(255, 243, 102, 108),
+                          size: 30,
+                        ),
+                      ),
+                      Container(
+                        height: 60,
+                        width: 60,
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 230, 236, 243),
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Icon(
+                          Icons.near_me,
+                          color: Color.fromARGB(255, 6, 15, 98),
+                          size: 30,
+                        ),
+                      ),
+                      Container(
+                        height: 60,
+                        width: 150,
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 6, 15, 98),
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "BOOK",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
