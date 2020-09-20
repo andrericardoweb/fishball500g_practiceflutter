@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'FishBall 500g',
-      home: P004()
+      home: P005()
     );
   }
 }
